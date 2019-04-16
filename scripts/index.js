@@ -161,7 +161,6 @@ const initialize = () => {
 };
 
 const destroy = () => {
-    console.log(snakeParts);
     for (const part of snakeParts) {
         document.body.removeChild(part);
     }
