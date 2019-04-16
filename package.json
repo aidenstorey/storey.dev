@@ -1,0 +1,14 @@
+{
+  "name": "storey-dev",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "repository": "https://github.com/aidenstorey/storey-dev",
+  "author": "aiden@storey.dev",
+  "license": "CC-BY",
+  "scripts": {
+    "serve": "serve"
+  },
+  "devDependencies": {
+    "serve": "^11.0.0"
+  }
+}
