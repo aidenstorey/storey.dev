@@ -16,7 +16,19 @@ const INVERSE_DIRECTION = {
     'Right': 'Left',
 };
 
+const ROTATIONAL_DIRECTION = {
+    0: 'Up',
+    1: 'Right',
+    2: 'Down',
+    3: 'Left',
+};
+
 const MOVEMENT_DISTANCE = 1.5;
+
+const HALF_PI = Math.PI * 0.5;
+const QUARTER_PI = Math.PI * 0.25;
+
+const LISTENER_OPTIONS = { passive: false };
 
 
 // ---------
@@ -48,6 +60,8 @@ let snakeStart, snakeLast;
 
 let snakeCurrentDirection, snakeNextDirection;
 
+let touchX, touchY;
+
 
 // --------
 // Helpers
@@ -67,7 +81,7 @@ const elementMove = (element, x, y) => {
 
 const elementReset = (element) => {
     element.style.position = 'static';
-}
+};
 
 const snakeAdd = (count = 1) => {
     for (let c = 0; c < count; ++c) {
@@ -93,10 +107,39 @@ const snakeCheckCollision = () => {
             return true;
         }
 
-    // TODO: Self collisions
+    for (let i = 3; i < snakeParts.length; ++i) {
+        const part = snakeParts[(snakeStart + i) % snakeParts.length];
+        if (head.offsetLeft === part.offsetLeft && head.offsetTop === part.offsetTop) {
+            return true;
+        }
+    }
 
     return false;
+};
+
+const snakeKill = () => {
+    clearTimeout(updateTaskId);
+    updateTaskId = null;
+
+    for (let i = 0; i < 6; ++i) {
+        setTimeout(() => {
+            snakeShow(i % 2);
+        }, i * 200);
+    }
+
+    setTimeout(() => {
+        destroy();
+        initialize();
+    }, 1200);
 }
+
+const snakeShow = (show = true) => {
+    const background = show ? '#333' : null;
+
+    for (const part of snakeParts) {
+        part.style.background = background;
+    }
+};
 
 
 // ----------
@@ -124,6 +167,33 @@ addEventListener('resize', () => {
         initialize();
     }, 500);
 });
+
+addEventListener('touchstart', (event) => {
+    if (touchX || touchY) {
+        return;
+    }
+
+    touchX = event.touches[0].clientX;
+    touchY = event.touches[0].clientY;
+}, LISTENER_OPTIONS);
+
+addEventListener('touchmove', (event) => {
+    event.preventDefault();
+}, LISTENER_OPTIONS);
+
+addEventListener('touchend', (event) => {
+    const dx = event.changedTouches[0].clientX - touchX;
+    const dy = event.changedTouches[0].clientY - touchY;
+
+    let sector = Math.floor((Math.acos(-dy / Math.sqrt(dx * dx + dy * dy)) + QUARTER_PI) / HALF_PI);
+    if (sector === 1 && dx < 0) {
+        sector = 3;
+    }
+
+    changeDirection(ROTATIONAL_DIRECTION[sector]);
+
+    touchX = touchY = null;
+}, LISTENER_OPTIONS);
 
 
 // -----
@@ -176,8 +246,7 @@ const destroy = () => {
 
 const updateLoop = () => {
     if (snakeCheckCollision()) {
-        destroy();
-        initialize();
+        snakeKill();
     } else {
         snakeCurrentDirection = snakeNextDirection;
         snakeLast = (snakeStart + snakeParts.length - 1) % snakeParts.length;
