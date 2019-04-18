@@ -4,7 +4,7 @@
   "description": "Personal website",
   "repository": "https://github.com/aidenstorey/storey-dev",
   "author": "aiden@storey.dev",
-  "license": "CC-BY",
+  "license": "CC-BY-4.0",
   "scripts": {
     "serve": "serve"
   },
