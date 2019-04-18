@@ -37,6 +37,7 @@ const LISTENER_OPTIONS = { passive: false };
 
 const github = document.getElementById('g');
 const linkedin = document.getElementById('l');
+const email = document.getElementById('e');
 const snake = document.getElementById('s');
 
 
@@ -54,7 +55,7 @@ let playingHeight, playingWidth;
 let screenHeight, screenWidth;
 let screenEM;
 
-let snakeCollectables = [ github, linkedin ];
+let snakeCollectables = [ github, linkedin, email ];
 let snakeParts = [];
 let snakeStart, snakeLast;
 
@@ -77,10 +78,12 @@ const elementMove = (element, x, y) => {
     element.style.position = 'fixed';
     element.style.left = `${x}px`;
     element.style.top = `${y}px`;
+    element.style.paddingRight= '0';
 };
 
 const elementReset = (element) => {
     element.style.position = 'static';
+    element.style.paddingRight = `${MOVEMENT_DISTANCE}em`
 };
 
 const snakeAdd = (count = 1) => {
@@ -184,6 +187,11 @@ addEventListener('touchmove', (event) => {
 addEventListener('touchend', (event) => {
     const dx = event.changedTouches[0].clientX - touchX;
     const dy = event.changedTouches[0].clientY - touchY;
+    touchX = touchY = null;
+
+    if (dx === 0 && dy === 0) {
+        return;
+    }
 
     let sector = Math.floor((Math.acos(-dy / Math.sqrt(dx * dx + dy * dy)) + QUARTER_PI) / HALF_PI);
     if (sector === 1 && dx < 0) {
@@ -191,9 +199,20 @@ addEventListener('touchend', (event) => {
     }
 
     changeDirection(ROTATIONAL_DIRECTION[sector]);
-
-    touchX = touchY = null;
 }, LISTENER_OPTIONS);
+
+addEventListener('mousedown', (event) => {
+    const head = snakeParts[snakeStart];
+    const dx = event.clientX - head.offsetLeft;
+    const dy = event.clientY - head.offsetTop;
+
+    let sector = Math.floor((Math.acos(-dy / Math.sqrt(dx * dx + dy * dy)) + QUARTER_PI) / HALF_PI);
+    if (sector === 1 && dx < 0) {
+        sector = 3;
+    }
+
+    changeDirection(ROTATIONAL_DIRECTION[sector]);
+});
 
 
 // -----
@@ -218,9 +237,10 @@ const initialize = () => {
     playingHeight = Math.floor((screenHeight - playingOriginY) / screenEM) * screenEM - screenEM;
     playingWidth = Math.floor((screenWidth - playingOriginX) / screenEM) * screenEM - screenEM;
 
-    elementMove(github, elementOriginX, elementOriginY);
-    elementMove(linkedin, elementOriginX + screenEM, elementOriginY);
-    elementMove(snake, elementOriginX + screenEM * 2, elementOriginY);
+    for (let i = 0; i < snakeCollectables.length; ++i) {
+        elementMove(snakeCollectables[i], elementOriginX + screenEM * i * 2, elementOriginY);
+    }
+    elementMove(snake, elementOriginX + screenEM * 6, elementOriginY);
 
     snakeCurrentDirection = snakeNextDirection = 'Right';
     snakeStart = snakeLast = 0;
@@ -236,8 +256,9 @@ const destroy = () => {
     }
     snakeParts.length = 0;
 
-    elementReset(github);
-    elementReset(linkedin);
+    for (const collectable of snakeCollectables) {
+        elementReset(collectable);
+    }
     elementReset(snake);
 
     clearTimeout(updateTaskId);
