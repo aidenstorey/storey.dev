@@ -30,10 +30,12 @@
             }
 
             img {
-                filter: brightness(0%);
                 width: 1.4rem;
                 z-index: 1;
-                padding-right: 1.5rem;
+            }
+
+            a {
+                margin-right: 1.5rem;
             }
         </style>
     </head>
@@ -42,10 +44,11 @@
         <p style='font-weight:500;font-size:2.2em'>My name is Aiden Storey.</p>
         <p>Originally from New Zealand, I am a Software Developer based in Ontario, Canada.</p>
         <p>Over the years I have done everything from game development to web development. I live to learn and always strive to apply this to all aspects of my life.</p>
-        <a id='g' href='https://github.com/bitwise-aiden' target='_blank' rel='noreferrer'><img src='data:image/png;base64,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'/></a>
-        <a id='l' href='https://www.linkedin.com/in/aidenstorey' target='_blank' rel='noreferrer'><img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgpMwidZAAAClElEQVRYCe2ZvWtUQRTFXTEWiohGbASzaidWYhdRUWTBDf4FdiaFoJWIEbGySyNYqSj+H1YKWgniF1hYJFr4RUBFFBVc/Z1kN1xfZtw7TzN5T/bCyd45c9/ck7sz7828baxYbMNQ6xfTy8Z8IfM70AkpOAj5DPysIN6gaQI0wIIdwtN/UkXBVtOZBcU4Va2wFSz/KxhWuTWHZ0FdrLUSpWvrorarc0iia2f/tej3fB3nQAuMg0dgWW0r2Yur1LY/0L+toHA17dvAxuXy257pcQlx08DadxqnLZHT94h+GBH0GD74aI3E/zPaI7oZyTYC77k+cnl52pP0FMOH7uWT5dP+/ZX9FqIW2H2wD0j8TnAD5Fp4xTztVST32B6C7ngCc8R4pkcOHUk5PJX+yIi3AqPugNtt+Lv4r01b7hrQ7nLquwmeAvk6aGwHY+AASCpgvzmtW1vITkDa+dYTZ2M1dgdcBHogxWyUjmlgx4v5rodLLJGXP0/gBaAHUszu0XEEfIoFWD7pK7EXOv23xE05Y3UQueyJXWrR3xDxwyOkG3PdE+tZiJ5x+sVobh8HI+AluAJegaLNQAhNELUcoiX0AdhoVBzD3wX0eqBozyGaRdK2l3p6KNc4sILFaavbkhMw3Q7/aDlEH44o0FM2ZJ9DpOVyiN5kExp/g/GT3Byih5IUOYJziHbISAsZiE6rV/noQaXL1y7tykGl0+pVPrqWlfZsmLZQk6uBuuhUbu0kjaOW6PrFfUcvZD9OaNy9vYDYZ4MObRtfxAIqyI/VcnrUVrSORHWyjua0qq2N9+YaKNdrBR0g5kynCxFVx7V5ufN/VfGzQL/TVVG4Xvjo9qgXoL//bEtbpwwdg9aBqpgK+QTM9AT9AsSxapB7LW8iAAAAAElFTkSuQmCC'/></a>
-        <a id='e' href='mailto:aiden@storey.dev'><img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgpMwidZAAACr0lEQVRYCe2XzYtOURzHHy+byShJXmowxWAjRRT/gWaUlB0rTd7Gih07k2xlyMtkIYqaWJiNvJQySbIQsVASIfLWzJi8ZPh8bveZruOkmbl3PM/ifuvznHt+59xzvvd3z7n3PpVKqTID9ZGB+djogX74VWP0cAmWQSLNfYBaGwvn/4inpin8nIFVUG9qwNCCSfwMQGO9uUv99GvQ1GZlrJb6w8/kiJO1kdj/Ci2PTRQuzp90OgYzYp0nKOZ6OwzfIfRTeRwJ2uk1bIaJ1nomeAahMesvnHwDdMEwxDr1Em+GojWPAS9CbE5jZ2EjVNpSOijfQeyEQeJ7YSrklet+N3yC2Fw+qPdD4ssd60FWPhN3wpxsMD1+QNkO9yJtowmtoNMpWBPp/JlYN9zKtvmgXpINcPwGroLZsi270+dS3wazoA++wWjUSKdD4EvBN1dWZtH5OuFptsFjM3geeuAHhGom0AFLwwbqr2APXI60ZUOu8aOwMBtMj59THocnaT1bmJhWDXoFTuZGeQSh7NMKW2Ba2Ej9CrimXgZtTdSPwKYgbtXMXwAvzsdaqMUEdkFL1aAdNHoDHDSmmQS3w7pIo5voAPj8dByzfhCmQyjX70l4Gzak9XZKE+LyS26xA2blLfmXVtO4A2ZHOt1PY260UH6dnIbbYUNQ946MyI0wVpmBh+Atb4PkSilVzJgJ6AXX+hcYk8Zj0Am+QjfcBG9nC8TkG8K1/dfujHWOxcZrsDqWBvaBa2YrNIDyAs6BmYttAsKjU16DzjIMrps74NpUJ+B9cpTzpwiDVQsa6qxWiiqzb4mixix0nNJg3nSWGSwzmDcDec/3a2YIqm+AvOMVff6Qm+Ru0aMWOF6fY62EAfCro57wz9MiSOTXyHXwc6jWJgfxcA1GzHFcqsxAzTLwG7lRHulUOGVbAAAAAElFTkSuQmCC'/></a>
-        <img id='s' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' />
+        <a id='g' href='https://github.com/bitwise-aiden' target='_blank' rel='noreferrer'><img alt='GitHub' src='data:image/png;base64,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'/></a>
+        <a id='l' href='https://www.linkedin.com/in/aidenstorey' target='_blank' rel='noreferrer'><img alt='LinkedIn' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAtCAYAAAA6GuKaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgpMwidZAAAClElEQVRYCe2ZvWtUQRTFXTEWiohGbASzaidWYhdRUWTBDf4FdiaFoJWIEbGySyNYqSj+H1YKWgniF1hYJFr4RUBFFBVc/Z1kN1xfZtw7TzN5T/bCyd45c9/ck7sz7828baxYbMNQ6xfTy8Z8IfM70AkpOAj5DPysIN6gaQI0wIIdwtN/UkXBVtOZBcU4Va2wFSz/KxhWuTWHZ0FdrLUSpWvrorarc0iia2f/tej3fB3nQAuMg0dgWW0r2Yur1LY/0L+toHA17dvAxuXy257pcQlx08DadxqnLZHT94h+GBH0GD74aI3E/zPaI7oZyTYC77k+cnl52pP0FMOH7uWT5dP+/ZX9FqIW2H2wD0j8TnAD5Fp4xTztVST32B6C7ngCc8R4pkcOHUk5PJX+yIi3AqPugNtt+Lv4r01b7hrQ7nLquwmeAvk6aGwHY+AASCpgvzmtW1vITkDa+dYTZ2M1dgdcBHogxWyUjmlgx4v5rodLLJGXP0/gBaAHUszu0XEEfIoFWD7pK7EXOv23xE05Y3UQueyJXWrR3xDxwyOkG3PdE+tZiJ5x+sVobh8HI+AluAJegaLNQAhNELUcoiX0AdhoVBzD3wX0eqBozyGaRdK2l3p6KNc4sILFaavbkhMw3Q7/aDlEH44o0FM2ZJ9DpOVyiN5kExp/g/GT3Byih5IUOYJziHbISAsZiE6rV/noQaXL1y7tykGl0+pVPrqWlfZsmLZQk6uBuuhUbu0kjaOW6PrFfUcvZD9OaNy9vYDYZ4MObRtfxAIqyI/VcnrUVrSORHWyjua0qq2N9+YaKNdrBR0g5kynCxFVx7V5ufN/VfGzQL/TVVG4Xvjo9qgXoL//bEtbpwwdg9aBqpgK+QTM9AT9AsSxapB7LW8iAAAAAElFTkSuQmCC'/></a>
+        <a id='e' href='mailto:aiden@storey.dev'><img alt='Email' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABWWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNS40LjAiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx0aWZmOk9yaWVudGF0aW9uPjE8L3RpZmY6T3JpZW50YXRpb24+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgpMwidZAAACr0lEQVRYCe2XzYtOURzHHy+byShJXmowxWAjRRT/gWaUlB0rTd7Gih07k2xlyMtkIYqaWJiNvJQySbIQsVASIfLWzJi8ZPh8bveZruOkmbl3PM/ifuvznHt+59xzvvd3z7n3PpVKqTID9ZGB+djogX74VWP0cAmWQSLNfYBaGwvn/4inpin8nIFVUG9qwNCCSfwMQGO9uUv99GvQ1GZlrJb6w8/kiJO1kdj/Ci2PTRQuzp90OgYzYp0nKOZ6OwzfIfRTeRwJ2uk1bIaJ1nomeAahMesvnHwDdMEwxDr1Em+GojWPAS9CbE5jZ2EjVNpSOijfQeyEQeJ7YSrklet+N3yC2Fw+qPdD4ssd60FWPhN3wpxsMD1+QNkO9yJtowmtoNMpWBPp/JlYN9zKtvmgXpINcPwGroLZsi270+dS3wazoA++wWjUSKdD4EvBN1dWZtH5OuFptsFjM3geeuAHhGom0AFLwwbqr2APXI60ZUOu8aOwMBtMj59THocnaT1bmJhWDXoFTuZGeQSh7NMKW2Ba2Ej9CrimXgZtTdSPwKYgbtXMXwAvzsdaqMUEdkFL1aAdNHoDHDSmmQS3w7pIo5voAPj8dByzfhCmQyjX70l4Gzak9XZKE+LyS26xA2blLfmXVtO4A2ZHOt1PY260UH6dnIbbYUNQ946MyI0wVpmBh+Atb4PkSilVzJgJ6AXX+hcYk8Zj0Am+QjfcBG9nC8TkG8K1/dfujHWOxcZrsDqWBvaBa2YrNIDyAs6BmYttAsKjU16DzjIMrps74NpUJ+B9cpTzpwiDVQsa6qxWiiqzb4mixix0nNJg3nSWGSwzmDcDec/3a2YIqm+AvOMVff6Qm+Ru0aMWOF6fY62EAfCro57wz9MiSOTXyHXwc6jWJgfxcA1GzHFcqsxAzTLwG7lRHulUOGVbAAAAAElFTkSuQmCC'/></a>
+        <a id='i' href='https://bitwise-aiden.itch.io' target='_blank' rel='noreferrer'><img alt='Itch.io Logo' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAeCAYAAAA/xX6fAAAAAXNSR0IArs4c6QAAAwVJREFUSImtl09IG0EUxr8RwZNUxBrRqhEU1ID2oE3dkkMvxWBJDhEKhRwLEXoLpUUoBARpKd6KQnprEFpQIWJJj8I2SVMvvRQPComaSzfB4q2Hwvagbzu78yZJaT8Iyc6+/X7vTebfCrQo27bx8cMugte+AwCM+HO7kFkRAFC68GF+IQIhRKt2PED+lIp5nJtpjPt99qOHEXvn3Vubrs/NtBKvUzsHAoAvnwsY+/XNaR+7qipkBPFy6b4AfuLpxp4dMoIAgB+f3jixR+0Bx8dbteuK6zZvQiEjCLNQAgCsvniF5WdPlCoadbXzS4YRiLLnFI4sIre7xd6jhAqZFeGFCg7WCNQoAQCuJMxCSYGK/wFrBFagub1sy7Ce670AgHrNYq9bgYpzM90URsYTo8Ps/cPjEwWsgyrTQlZobrbRbUdOIlffZvEAud0tBypLjPt9bHUEy2znnLZ4LMwCuRizeKDEmYUS2jgDGebv78FSIoGlRMJlLMO4GF3vKF3qhQHQzjdZFOPv70FmO4d4LIzQ3KxSKVuhrPRmFvlyGenN7D/FsEAajbIRAHT1dSNgTGlNAsYUuvq6Xc/oPNkKaZiT8jv7GOjoZAdNPBbGQEcn8jv7DT1I2mkxMz2Je3fvuIwBILXmriCVjCIeC7tiZ6YndbbuaeEtH1An++HxCd5nvwIAHkRvsve9ogVBOy0IRGara69d7alkFKlk1AWjGPk5bYWDQyPw3+h1quQekKGclpOPlbbD4xOnukrVwtlpWf0P6zXLWaKaGTZTvWYp+2ZbIbMizk7LqFT/LLzcsvS3kj2oOmXxrlQtp2vN4kHTXcIr764RjixiY33dFdNWuvCBqiQoqV6zUK9Z2jnlhVG8V1Rd6cKn7viDQyMA4FRKkgeTnMDE6LBrcJAocRk2vxDhzzQE9YK5HV8HYmFCXM5DIQTmFyLwdi8ZkIlsXqlazij0xulgQINzKR0VddXK5rIoWQ6mAL1QACy4GQjQv2+wbx/ccZ87hcsi0FF7ALduG5fmzMvNb2LNEcJxWnr8AAAAAElFTkSuQmCC' /></a>
+        <img id='s' alt='Square to be used during game of snake' src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7' />
         <script>
 // ----------
 // Constants
@@ -87,6 +90,7 @@ const LISTENER_OPTIONS = { passive: false };
 const github = document.getElementById('g');
 const linkedin = document.getElementById('l');
 const email = document.getElementById('e');
+const itch = document.getElementById('i');
 const snake = document.getElementById('s');
 
 
@@ -104,13 +108,16 @@ let playingHeight, playingWidth;
 let screenHeight, screenWidth;
 let screenEM;
 
-let snakeCollectables = [ github, linkedin, email ];
+let snakeCollectables = [ github, linkedin, email, itch ];
 let snakeParts = [];
 let snakeStart, snakeLast;
 
 let snakeCurrentDirection, snakeNextDirection;
 
 let touchX, touchY;
+
+let initialized;
+let playing;
 
 
 // --------
@@ -120,10 +127,17 @@ let touchX, touchY;
 const changeDirection = (direction) => {
     if (snakeCurrentDirection !== direction && snakeCurrentDirection !== INVERSE_DIRECTION[direction]) {
         snakeNextDirection = direction;
+
+        playing = true;
     }
 }
 
 const elementMove = (element, x, y) => {
+    if (!playing && initialized && element === itch) {
+        x = elementOriginX + screenEM * 20;
+        y = elementOriginY + screenEM * 3;
+    }
+
     element.style.position = 'fixed';
     element.style.left = `${x}px`;
     element.style.top = `${y}px`;
@@ -205,8 +219,6 @@ addEventListener('keydown', (event) => {
     }
 });
 
-// TODO: swipe listener
-
 addEventListener('resize', () => {
     if (resizeTaskId !== null) {
         clearTimeout(resizeTaskId);
@@ -269,6 +281,9 @@ addEventListener('mousedown', (event) => {
 // -----
 
 const initialize = () => {
+    initialized = false;
+    playing = false;
+
     resizeTaskId = updateTaskId = null;
 
     elementOriginX = github.offsetLeft;
@@ -286,15 +301,18 @@ const initialize = () => {
     playingHeight = Math.floor((screenHeight - playingOriginY) / screenEM) * screenEM - screenEM;
     playingWidth = Math.floor((screenWidth - playingOriginX) / screenEM) * screenEM - screenEM;
 
-    for (let i = 0; i < snakeCollectables.length; ++i) {
+    for (let i = 0; i < snakeCollectables.length - 1; ++i) {
         elementMove(snakeCollectables[i], elementOriginX + screenEM * i * 2, elementOriginY);
     }
+    elementMove(itch, elementOriginX + screenEM * 15, elementOriginY);
     elementMove(snake, elementOriginX + screenEM * 6, elementOriginY);
 
     snakeCurrentDirection = snakeNextDirection = 'Right';
     snakeStart = snakeLast = 0;
 
     snakeAdd(3);
+
+    initialized = true;
 
     requestAnimationFrame(updateLoop);
 };
