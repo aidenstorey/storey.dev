@@ -134,7 +134,7 @@ const changeDirection = (direction) => {
 
 const elementMove = (element, x, y) => {
     if (!playing && initialized && element === itch) {
-        x = elementOriginX + screenEM * 20;
+        x = elementOriginX + screenEM * 10;
         y = elementOriginY + screenEM * 3;
     }
 
@@ -304,7 +304,7 @@ const initialize = () => {
     for (let i = 0; i < snakeCollectables.length - 1; ++i) {
         elementMove(snakeCollectables[i], elementOriginX + screenEM * i * 2, elementOriginY);
     }
-    elementMove(itch, elementOriginX + screenEM * 15, elementOriginY);
+    elementMove(itch, elementOriginX + screenEM * 10, elementOriginY);
     elementMove(snake, elementOriginX + screenEM * 6, elementOriginY);
 
     snakeCurrentDirection = snakeNextDirection = 'Right';
